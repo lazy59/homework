@@ -1,0 +1,180 @@
+#home {
+  width: 100%;
+  .info_cards {
+    width: 100%;
+    display: flex;
+    .status_card {
+      height: 140px;
+      flex: 1;
+      background: #ccc;
+      color: #fff;
+      padding: 10px;
+      box-sizing: border-box;
+      position: relative;
+      .status-icon {
+        font-size: 144px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.2;
+        &.icon-cog {
+          transition: all 2s ease-in-out;
+          transform: translateX(-50%) rotate(0);
+        }
+      }
+      &:hover {
+        .icon-cog {
+          transform: translateX(-50%) rotate(360deg);
+        }
+      }
+      h3 {
+        font-size: 18px;
+        margin-bottom: 40px;
+      }
+      .num {
+        font-size: 48px;
+        text-align: right;
+      }
+      &.building {
+        background: #ff9a2a;
+      }
+      &.idle {
+        margin: 0 20px;
+        background: #7fbc39;
+      }
+      &.type_card {
+        display: flex;
+        color: #000;
+        background: #fff;
+        .type_item {
+          flex: 1;
+          text-align: center;
+        }
+        .type {
+          font-size: 12px;
+        }
+        .count {
+          font-size: 20px;
+          margin-top: 60px;
+        }
+      }
+    }
+  }
+  .handle_container {
+    margin-top: 20px;
+    display: flex;
+    height: 50px;
+    background-color: #fff;
+    .tab_container {
+      .tab_item {
+        cursor: pointer;
+        display: inline-block;
+        width: 85px;
+        height: 50px;
+        font-size: 14px;
+        box-sizing: border-box;
+        border-bottom: 3px solid transparent;
+        border-right: 1px solid #ddd;
+        text-align: center;
+        line-height: 50px;
+        &.active,
+        &:hover {
+          border-bottom: 3px solid $blueColor;
+          color: $blueColor;
+        }
+      }
+    }
+    .search_box {
+      position: relative;
+      display: inline-block;
+      margin-top: 12px;
+      margin-left: 30px;
+      input {
+        width: 180px;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 25px;
+      }
+      i {
+        position: absolute;
+        color: #aaa;
+        font-size: 18px;
+        top: 5px;
+        left: 5px;
+      }
+    }
+  }
+  .agents_list {
+    .agent_item {
+      box-sizing: border-box;
+      margin-top: 30px;
+      padding: 15px;
+      width: 100%;
+      background-color: #fff;
+      display: flex;
+      .agent_icon {
+        width: 80px;
+        height: 80px;
+      }
+      .agent_content {
+        flex: 1;
+        .agent_info {
+          display: flex;
+          align-items: center;
+          height: 30px;
+          i {
+            margin: 0 10px;
+            color: #666;
+            font-size: 16px;
+          }
+          .name {
+            color: $blueColor;
+          }
+          .tag {
+            padding: 1px 10px;
+            color: #fff;
+            font-size: 14px;
+            margin: 0 15px;
+          }
+        }
+      }
+      .agent_resource {
+        display: flex;
+        margin-top: 20px;
+        .add_btn {
+          font-size: 18px;
+          height: 24px;
+          line-height: 24px;
+          margin: 0 10px;
+          &::after {
+            content: "\f067";
+          }
+        }
+        .resources {
+          flex: 1;
+          .resource_tag {
+            display: inline-block;
+            background-color: $lightHoverColor;
+            padding: 0 10px;
+            height: 24px;
+            line-height: 24px;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            span {
+              margin-right: 5px;
+            }
+            i {
+              cursor: pointer;
+            }
+          }
+        }
+        .deny {
+          i {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

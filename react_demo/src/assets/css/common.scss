@@ -1,0 +1,64 @@
+$blueColor: #00b4cf;
+$blueHoverColor: #01869a;
+$grayColor: #2d4054;
+$grayHoverColor: #435466;
+$lightColor: #f3f3f3;
+$lightHoverColor: #e1e4e6;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  color: #2d4054;
+  font-size: 14px;
+}
+li {
+  list-style: none;
+}
+.btn_layout {
+  color: #fff;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.blue_btn {
+  @extend .btn_layout;
+  background-color: $blueColor;
+  &:hover {
+    background-color: $blueHoverColor;
+  }
+}
+.gray_btn {
+  @extend .btn_layout;
+  background-color: $grayColor;
+  &:hover {
+    background-color: $grayHoverColor;
+  }
+}
+
+#root,
+#app {
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  background: #eee;
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+  }
+  .content {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+  }
+}

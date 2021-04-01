@@ -1,0 +1,57 @@
+@blueColor: #00b4cf;
+@blueHoverColor: #01869a;
+@grayColor: #2d4054;
+@grayHoverColor: #435466;
+@lightColor: #f3f3f3;
+@lightHoverColor: #e1e4e6;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+  color: #2d4054;
+  font-size: 14px;
+}
+li {
+  list-style: none;
+}
+.btn_layout {
+  color: #fff;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.blue_btn:extend(.btn_layout) {
+  background-color: @blueColor;
+  &:hover {
+    background-color: @blueHoverColor;
+  }
+}
+.gray_btn:extend(.btn_layout) {
+  background-color: @grayColor;
+  &:hover {
+    background-color: @grayHoverColor;
+  }
+}
+.c_container {
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  .c_container {
+    position: relative;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .c_container {
+    width: 1200px;
+  }
+}

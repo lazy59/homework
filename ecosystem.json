@@ -1,0 +1,28 @@
+
+{
+    "apps": [{
+        "name": "homework", 
+        "script": "", 
+        "env": {
+            "COMON_VARIABLE": "true"
+        },
+        "env_production": {
+            "NODE_ENV": "production"
+        }
+     }],
+    "deploy": {
+        "production": {
+            "user": "root", 
+            "host": ["42.192.52.36"],
+            "port": "22",
+            "ref": "origin/master",
+            "repo": "git@github.com:lazy59/homework.git",
+            "path": "/usr/share/nginx/homework",
+            "ssh_options": "StrictHostKeyChecking=no",
+            "pre-deploy-local":"echo 'Deploy Done!'",
+            "post-deploy": "cd vue_demo && npm i && npm run build && cd ../react_demo && npm i && npm run build",
+            "env": {
+                "NODE_ENV": "production"
+            }
+      }}
+ }
