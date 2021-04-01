@@ -49,6 +49,7 @@ export default {
   .content {
     height: 100%;
     position: relative;
+    box-sizing: border-box;
     overflow: auto;
     flex: 1;
     padding: 20px;
