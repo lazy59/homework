@@ -20,7 +20,7 @@
             "path": "/usr/share/nginx/homework",
             "ssh_options": "StrictHostKeyChecking=no",
             "pre-deploy-local":"echo 'Deploy Done!'",
-            "post-deploy": "cd vue_demo && npm i && npm run build && cd ../react_demo && npm i && npm run build",
+            "post-deploy": "cd vue_demo && npm install && npm run build && cd ../react_demo && npm install && npm run build",
             "env": {
                 "NODE_ENV": "production"
             }
